@@ -1,0 +1,33 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json
+
+upgrade:
+  source: cdn
+  interval: 168h
+  auto: false
+  notice: false
+blocks:
+  - type: prompt
+    alignment: left
+    segments:
+      - template: <#ffff00>{{ .UserName }}@{{ .HostName }}
+        foreground: "#ffffff"
+        type: session
+        style: plain
+
+      - template: <#00ff00>[</><#00ff00>]</>
+        foreground: "#ffffff"
+        type: root
+        style: plain
+
+      - template: " {{ .Path }} >"
+        type: path
+        style: plain
+        properties:
+          style: full
+
+      - template: <#ffff00>[</>{{ .HEAD }}<#ffff00>]</> 
+        foreground: "#ffffff"
+        type: git
+        style: plain
+version: 3
+final_space: true
