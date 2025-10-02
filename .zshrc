@@ -8,7 +8,6 @@ bindkey -e
 zstyle ':completion:*' menu select
 setopt COMPLETE_ALIASES
 zstyle ':completion:*' rehash true
-setopt CORRECT
 
 
 alias ls='ls --color=auto'
