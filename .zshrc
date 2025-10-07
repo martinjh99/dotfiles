@@ -64,7 +64,7 @@ if [[ ! -d /home/martin/.cache/oh-my-posh ]]; then
     curl -s https://ohmyposh.dev/install.sh | bash -s
 fi
 
-eval "$(oh-my-posh init zsh --config ~/.config/omp/martin.omp.yaml)"
+eval "$(oh-my-posh init zsh --config ~/.martin.omp.yaml)"
 #eval "$(oh-my-posh init zsh --config sonicboom_dark)"
 
 
