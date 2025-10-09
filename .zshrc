@@ -66,6 +66,3 @@ fi
 
 eval "$(oh-my-posh init zsh --config ~/.martin.omp.yaml)"
 #eval "$(oh-my-posh init zsh --config sonicboom_dark)"
-
-
-
