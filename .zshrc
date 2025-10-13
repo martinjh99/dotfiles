@@ -18,7 +18,6 @@ alias ip="ip -br -c a"
 alias dc="docker compose"
 alias dls="docker ps"
 alias di="docker images"
-
 export EDITOR=nvim
 
 
