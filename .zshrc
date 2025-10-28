@@ -18,6 +18,9 @@ alias ip="ip -br -c a"
 alias dc="docker compose"
 alias dls="docker ps"
 alias di="docker images"
+alias fpl="flatpak list --app"
+alias fpu="flatpak update"
+
 export EDITOR=nvim
 
 
