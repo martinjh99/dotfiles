@@ -9,7 +9,6 @@ zstyle ':completion:*' menu select
 setopt COMPLETE_ALIASES
 zstyle ':completion:*' rehash true
 
-alias upd="sudo dnf makecache && sudo dnf distro-sync"
 alias ls='ls --color=auto'
 alias lsl='ls -ahl'
 alias df='df -h'
