@@ -9,7 +9,7 @@ blocks:
   - type: prompt
     alignment: left
     segments:
-      - template: <#ffff00>{{ .UserName }}@{{ .HostName }}
+      - template: <#00ff00>{{ .UserName }}@{{ .HostName }}
         foreground: "#ffffff"
         type: session
         style: plain
