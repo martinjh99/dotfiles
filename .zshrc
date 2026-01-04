@@ -9,7 +9,6 @@ zstyle ':completion:*' menu select
 setopt COMPLETE_ALIASES
 zstyle ':completion:*' rehash true
 
-
 alias ls='ls --color=auto'
 alias lsl='ls -ahl'
 alias df='df -h'
@@ -18,6 +17,9 @@ alias ip="ip -br -c a"
 alias dc="docker compose"
 alias dls="docker ps"
 alias di="docker images"
+alias fpl="flatpak list --app"
+alias fpu="flatpak update"
+
 export EDITOR=nvim
 
 
