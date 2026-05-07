@@ -11,13 +11,13 @@ zstyle ':completion:*' rehash true
 
 alias ls='ls --color=auto'
 alias lsl='ls -ahl'
-alias df='df -h'
-alias du="du -h --max-depth=1 ."
+alias df='grc df -h'
+alias du="grc du -h --max-depth=1 ."
 alias ip="ip -br -c a"
 alias dc="docker compose"
-alias dls="docker ps"
-alias di="docker images"
-alias fpl="flatpak list --app"
+alias dls="grc docker ps"
+alias di="grc docker images"
+alias fpl="grc flatpak list --app"
 alias fpu="flatpak update"
 
 export EDITOR=nvim
