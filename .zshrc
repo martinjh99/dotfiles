@@ -20,8 +20,7 @@ alias di="grc docker images"
 alias fpl="grc flatpak list --app"
 alias fpu="flatpak update"
 
-export EDITOR=nvim
-
+export EDITOR=nano
 
 
 
@@ -60,10 +59,13 @@ bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
 
 ### oh my posh install and setup
-### Install oh-my-posh if cache directory not found
-if [[ ! -d $HOME/.cache/oh-my-posh ]]; then
-    curl -s https://ohmyposh.dev/install.sh | bash -s
-fi
+#### Install oh-my-posh if cache directory not found
+#if [[ ! -d $HOME/.cache/oh-my-posh ]]; then
+#    curl -s https://ohmyposh.dev/install.sh | bash -s
+#fi
 
-eval "$(oh-my-posh init zsh --config ~/.martin.omp.yaml)"
+#eval "$(oh-my-posh init zsh --config ~/.martin.omp.yaml)"
 #eval "$(oh-my-posh init zsh --config pixelrobots)"
+
+eval "$(starship init zsh)"
+
