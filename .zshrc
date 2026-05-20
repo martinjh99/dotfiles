@@ -20,7 +20,7 @@ alias di="grc docker images"
 alias fpl="grc flatpak list --app"
 alias fpu="flatpak update"
 
-export EDITOR=nano
+export EDITOR=nvim
 
 
 
