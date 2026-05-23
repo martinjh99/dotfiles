@@ -19,7 +19,7 @@ alias dls="grc docker ps"
 alias di="grc docker images"
 alias fpl="grc flatpak list --app"
 alias fpu="flatpak update"
-
+alias py="python3"
 export EDITOR=nvim
 
 
