@@ -39,7 +39,7 @@ truncation_symbol = "…/"
 # Here is how you can shorten some long paths by text replacement
 # similar to mapped_locations in Oh My Posh:
 [hostname]
-#ssh_only = true
+ssh_only = false
 #ssh_symbol = "ssh"
 format = '[@$hostname](white) '
 trim_at = '.'
