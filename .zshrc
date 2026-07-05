@@ -9,8 +9,6 @@ zstyle ':completion:*' menu select
 setopt COMPLETE_ALIASES
 zstyle ':completion:*' rehash true
 
-alias ls='ls --color=auto'
-alias lsl='ls -ahl'
 alias df='grc df -h'
 alias du="grc du -h --max-depth=1 ."
 alias ip="ip -br -c a"
@@ -20,6 +18,10 @@ alias di="grc docker images"
 alias fpl="grc flatpak list --app"
 alias fpu="flatpak update"
 alias py="python3"
+alias ls="eza --icons=always --git"
+alias ll="ls -l"
+
+
 export EDITOR=nvim
 
 
@@ -49,7 +51,6 @@ zinit light-mode for \
 
 zinit light zsh-users/zsh-syntax-highlighting
 zinit light zsh-users/zsh-autosuggestions
-zinit snippet OMZ::plugins/git/git.plugin.zsh
 zinit load 'zsh-users/zsh-history-substring-search'
 zinit ice wait atload'_history_substring_search_config'
 
@@ -58,14 +59,6 @@ source ~/.local/share/zinit/plugins/zsh-users---zsh-history-substring-search/zsh
 bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
 
-### oh my posh install and setup
-#### Install oh-my-posh if cache directory not found
-#if [[ ! -d $HOME/.cache/oh-my-posh ]]; then
-#    curl -s https://ohmyposh.dev/install.sh | bash -s
-#fi
-
-#eval "$(oh-my-posh init zsh --config ~/.martin.omp.yaml)"
-#eval "$(oh-my-posh init zsh --config pixelrobots)"
-
+## Load prompt
 eval "$(starship init zsh)"
 
