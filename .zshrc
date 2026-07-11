@@ -13,16 +13,35 @@ alias df='grc df -h'
 alias du="grc du -h --max-depth=1 ."
 alias ip="ip -br -c a"
 alias dc="docker compose"
-alias dls="grc docker ps"
-alias di="grc docker images"
-alias fpl="grc flatpak list --app"
+alias dls="docker ps"
+alias di="docker images"
+alias fpl="flatpak list --app"
 alias fpu="flatpak update"
 alias py="python3"
-alias ls="eza --icons=always --git"
+alias ls="eza --icons=always --git -g"
 alias ll="ls -l"
-
-
+alias tree="ls --tree"
+alias trd="tree --only-dirs"
 export EDITOR=nvim
+
+#
+chpwd() {
+#If already in a virtualenv, do nothing
+  if [[ -n "$VIRTUAL_ENV" && "$PWD" != *"${VIRTUAL_ENV:h}"* ]]; then
+    deactivate
+    return  
+  fi
+
+  [[ -n "$VIRTUAL_ENV" ]] && return
+
+  local dir="$PWD"
+  while [[ "$dir" != "/" ]]; do
+    if [[ -f "$dir/.venv/bin/activate" ]]; then
+      source "$dir/.venv/bin/activate"
+      return
+    fi
+    dir="${dir:h}"
+  done }
 
 
 
