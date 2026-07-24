@@ -7,7 +7,9 @@ if [[ ! -f /usr/bin/grc ]] ; then
   sudo zypper  --non-interactive in grc
 fi 
 
-
+if [[ ! -f /usr/bin/starship ]]; then
+  sudo zypper --non-interactive in starship
+fi 
 
 path+=$HOME/.local/bin
 export PATH
