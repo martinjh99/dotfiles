@@ -15,6 +15,10 @@ if [[ ! -f /usr/bin/stow ]]; then
   sudo zypper --non-interactive in stow
 fi
 
+if [[ ! -f /usr/bin/git ]]; then
+  sudo zypper --non-interactive in git 
+fi 
+
 
 #Configure path and completions
 path+=$HOME/.local/bin
