@@ -1,7 +1,7 @@
+#Install Needed Software
 if [[ ! -f /usr/bin/eza ]] ; then
   sudo zypper  --non-interactive in eza
 fi
-
 
 if [[ ! -f /usr/bin/grc ]] ; then 
   sudo zypper  --non-interactive in grc
@@ -11,17 +11,28 @@ if [[ ! -f /usr/bin/starship ]]; then
   sudo zypper --non-interactive in starship
 fi 
 
+if [[ ! -f /usr/bin/stow ]]; then
+  sudo zypper --non-interactive in stow
+fi
+
+
+#Configure path and completions
 path+=$HOME/.local/bin
 export PATH
 fpath=(~/.docker/completions \\$fpath)
+
+#Configure History
 HISTFILE=~/.histfile
 HISTSIZE=1000
 SAVEHIST=1000
-bindkey -e
+
+#completions setup  
 zstyle ':completion:*' menu select
 setopt COMPLETE_ALIASES
 zstyle ':completion:*' rehash true
 
+
+# Aliases
 alias df='grc df -h'
 alias du="grc du -h --max-depth=1 ."
 alias ip="ip -br -c a"
@@ -68,6 +79,7 @@ zinit ice wait atload'_history_substring_search_config'
 
 ### Use history substring search
 source ~/.local/share/zinit/plugins/zsh-users---zsh-history-substring-search/zsh-history-substring-search.zsh
+bindkey -e
 bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
 
