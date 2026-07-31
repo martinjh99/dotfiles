@@ -1,26 +1,4 @@
-#Install Needed Software
-if [[ ! -f /usr/bin/eza ]] ; then
-  sudo zypper  --non-interactive in eza
-fi
-
-if [[ ! -f /usr/bin/grc ]] ; then 
-  sudo zypper  --non-interactive in grc
-fi 
-
-if [[ ! -f /usr/bin/starship ]]; then
-  sudo zypper --non-interactive in starship
-fi 
-
-if [[ ! -f /usr/bin/stow ]]; then
-  sudo zypper --non-interactive in stow
-fi
-
-if [[ ! -f /usr/bin/git ]]; then
-  sudo zypper --non-interactive in git 
-fi 
-
-
-#Configure path and completions
+Configure path and completions
 path+=$HOME/.local/bin
 export PATH
 fpath=(~/.docker/completions \\$fpath)
