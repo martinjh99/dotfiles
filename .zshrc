@@ -1,4 +1,4 @@
-Configure path and completions
+#Configure path and completions
 path+=$HOME/.local/bin
 export PATH
 fpath=(~/.docker/completions \\$fpath)
