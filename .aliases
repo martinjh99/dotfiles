@@ -1,0 +1,16 @@
+#!/usr/bin/env zsh
+# Aliases
+alias df='grc df -h'
+alias du="grc du -h --max-depth=1 ."
+alias ip="ip -br -c a"
+alias dc="docker compose"
+alias dls="docker ps"
+alias di="docker images"
+alias fpl="flatpak list --app"
+alias fpu="flatpak update"
+alias py="python3"
+alias ls="eza --icons=always --git -g"
+alias ll="ls -l"
+alias tree="ls --tree"
+alias trd="tree --only-dirs"
+export EDITOR=nvim
