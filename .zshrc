@@ -1,5 +1,5 @@
-source .aliases
-source .zinit
+source ~/.aliases
+source ~/.zinit
 
 #Configure path and completions
 path+=$HOME/.local/bin
