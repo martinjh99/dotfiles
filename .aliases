@@ -13,4 +13,5 @@ alias ls="eza --icons=always --git -g"
 alias ll="ls -l"
 alias tree="ls --tree"
 alias trd="tree --only-dirs"
-export EDITOR=nvim
+alias nv="NVIM_APPNAME=nvim2 nvim"
+ export EDITOR=nvim

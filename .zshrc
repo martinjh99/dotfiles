@@ -1,6 +1,9 @@
 source ~/.aliases
 source ~/.zinit
 
+autoload -Uz compinit
+compinit
+
 #Configure path and completions
 path+=$HOME/.local/bin
 export PATH
@@ -8,8 +11,8 @@ fpath=(~/.docker/completions \\$fpath)
 
 #Configure History
 HISTFILE=~/.histfile
-HISTSIZE=1000
-SAVEHIST=1000
+HISTSIZE=100000
+SAVEHIST=100000
 #completions setup
 zstyle ':completion:*' menu select
 setopt COMPLETE_ALIASES
